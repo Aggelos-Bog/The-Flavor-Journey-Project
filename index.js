@@ -7,14 +7,17 @@ const app = express();
 const port = 3000;
 
 // Initialize global variables
-const currentYear = new Date().getFullYear();
-let isContentValid = false;      // Flag for content validation
-let subject = "";               // Store blog post subject
-let title = "";                // Store blog post title
-let username = "";             // Store author username
-let recipe = "";              // Store blog post recipe content
-let errorMess = "";          // Store error messages
-let posted = false;         // Flag to track if post is submitted
+const currentDate = new Date();                      // Create a new Date object for the current date
+const currentYear = currentDate.getFullYear();      // Get the year 
+let currentDay = "";                    // Store blog post Day
+let currentMonth = "";                 // Store blog post Month
+let isContentValid = false;             // Flag for content validation
+let subject = "";                      // Store blog post subject
+let title = "";                       // Store blog post title
+let username = "";                   // Store author username
+let recipe = "";                    // Store blog post recipe content
+let errorMess = "";                // Store error messages
+let posted = false;               // Flag to track if post is submitted
 
 // Set up middleware
 app.use(express.static("public"));                    // Serve static files from 'public' directory
@@ -30,6 +33,8 @@ app.get("/", (req, res) => {
     recipe: recipe,
     isContentValid: isContentValid,
     currentYear: currentYear,
+    currentMonth: currentMonth,
+    currentDay: currentDay,
     posted: posted,
   });
 });
@@ -47,6 +52,8 @@ app.get("/continueReading", (req, res) => {
     recipe: formattedRecipe,
     isContentValid: isContentValid,
     currentYear: currentYear,
+    currentMonth: currentMonth,
+    currentDay: currentDay,
     posted: posted,
   });
 });
@@ -76,6 +83,8 @@ app.get("/formRemove", (req, res) => {
   title = "";
   username = "";
   recipe = "";
+  currentMonth = "";
+  currentDay = "";
   isContentValid = false;
   posted = false;
   res.render("index.ejs",{
@@ -85,6 +94,8 @@ app.get("/formRemove", (req, res) => {
     recipe: recipe,
     isContentValid: isContentValid,
     currentYear: currentYear,
+    currentMonth: currentMonth,
+    currentDay: currentDay,
     posted: posted,
   });
 });
@@ -101,6 +112,8 @@ app.post("/submit", (req, res) => {
   title = req.body["title"];
   username = req.body["username"];
   recipe = req.body["recipe"];
+  currentDay = currentDate.getDate();          // Get the day of the month
+  currentMonth = currentDate.getMonth() + 1;  // Get the month (0-11, so we add 1 to make it 1-12)
 
   // Validate that all fields are filled
   if(subject!=="" && title!=="" && username!=="" && recipe!=="") {
@@ -113,6 +126,8 @@ app.post("/submit", (req, res) => {
       recipe: recipe,
       isContentValid: isContentValid,
       currentYear: currentYear,
+      currentMonth: currentMonth,
+      currentDay: currentDay,
       posted: posted,
     });
   } else {

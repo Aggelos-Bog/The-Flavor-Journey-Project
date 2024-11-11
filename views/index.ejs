@@ -16,7 +16,7 @@
                 <!-- Recipe title -->
                 <h3 class="mb-0"><%= title %></h3>
                 <!-- Post date -->
-                <div class="mb-1 text-body-secondary">Nov 12</div>
+                <div class="mb-1 text-body-secondary"><%= currentDay %>/<%= currentMonth %>/<%= currentYear %></div>
                 <!-- Show first 50 characters with ellipsis -->
                 <p class="card-text mb-auto"><%- recipe.slice(0, 30) %>...</p> 
                 

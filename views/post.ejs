@@ -1,7 +1,7 @@
 <%- include("partials/header.ejs") %>
 
 <!-- Main container for recipe details -->
-<div class="container my-5">
+<div class="container min-vh-100 py-5">
     <div class="row justify-content-center">
         <!-- Main content column, responsive size adjustments -->
         <div class="col-12 col-md-10 col-lg-8">
@@ -16,7 +16,7 @@
                 <h1 class="fw-bolder display-5 mb-1"><%= title %></h1>
                 <!-- Metadata below title -->
                 <div class="text-muted fst-italic mb-2">
-                    Posted on March 14, 2024 by <span class="text-decoration-underline">@<%= username %></span>
+                    Posted on <%= currentDay %>/<%= currentMonth %>/<%= currentYear %> <span class="text-decoration-underline">@<%= username %></span>
                 </div>
             </header>
 
