@@ -1,0 +1,60 @@
+<%- include("partials/header.ejs") %>
+
+<!-- Main container for recipe details -->
+<div class="container my-5">
+    <div class="row justify-content-center">
+        <!-- Main content column, responsive size adjustments -->
+        <div class="col-12 col-md-10 col-lg-8">
+
+            <!-- Article header section -->
+            <header class="mb-4 text-center">
+                <!-- Category/Subject display -->
+                <div class="text-muted fst-italic mb-2">
+                    <strong>Category:</strong> <span class="text-primary"><%= subject %></span>
+                </div>
+                <!-- Title in bold -->
+                <h1 class="fw-bolder display-5 mb-1"><%= title %></h1>
+                <!-- Metadata below title -->
+                <div class="text-muted fst-italic mb-2">
+                    Posted on March 14, 2024 by <span class="text-decoration-underline">@<%= username %></span>
+                </div>
+            </header>
+
+            
+            <!-- <section class="mb-5">
+                <div class="recipe-content"> -->
+                    <!-- Render formatted recipe content with for HTML interpretation -->
+                    <%- //recipe %>
+                <!-- </div>
+            </section> -->
+            <section class="mb-5">
+                <div class="card shadow-lg border-0">
+                    <div class="card-body p-4">
+                        <h2 class="card-title text-center mb-4">Recipe</h2>
+                        <!-- Render formatted recipe content with HTML interpretation -->
+                        <div class="recipe-content">
+                           <%- recipe %>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Author bio section -->
+            <div class="card bg-light shadow-sm border-0 mb-4">
+                <div class="card-body">
+                    <h5 class="card-title mb-1">@<%= username %></h5>
+                    <p class="card-text text-muted">Recipe enthusiast and food lover.</p>
+                    <small class="text-muted">Sharing culinary joy, one recipe at a time.</small>
+                </div>
+            </div>
+
+            <!-- Back button centered below content -->
+            <div class="text-center mt-4">
+                <a href="/" class="btn btn-primary">Back to Home</a>
+            </div>
+
+        </div> <!-- End of main content column -->
+    </div> <!-- End of row -->
+</div> <!-- End of container -->
+
+<%- include("partials/footer.ejs") %>

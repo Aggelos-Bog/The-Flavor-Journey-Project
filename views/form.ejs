@@ -1,0 +1,93 @@
+<!-- Include header partial -->
+<%- include("partials/header.ejs") %>
+
+      <!-- Main form container with centered content and padding -->
+      <div class="form-container d-flex justify-content-center align-items-center p-4">
+          <!-- Form card with light background and shadow -->
+          <div class="col-md-7 col-lg-8 p-4 bg-light rounded shadow">
+              <h4 class="mb-5 text-center">Post Your Recipe</h4>
+              <!-- Display error message if it exists -->
+              <% if(errorMess !== "") { %>
+                <p class="text-danger text-center"><%= errorMess %></p>
+              <% } %>
+              <!-- Recipe submission form with client-side validation -->
+              <form class="needs-validation" action="/submit" method="POST" novalidate="">
+                <div class="row g-3">
+                  <!-- Subject field -->
+                  <div class="col-sm-6">
+                    <label for="Subject" class="form-label">Subject</label>
+                    <input type="text" class="form-control" name="subject" id="subject" placeholder="" required="">
+                    <div class="invalid-feedback">
+                      Valid subject is required.
+                    </div>
+                  </div>
+      
+                  <!-- Title field -->
+                  <div class="col-sm-6">
+                    <label for="Title" class="form-label">Title</label>
+                    <input type="text" class="form-control" name="title" id="title" placeholder="" required="">
+                    <div class="invalid-feedback">
+                      Valid title is required.
+                    </div>
+                  </div>
+      
+                  <!-- Username field with @ prefix -->
+                  <div class="col-12">
+                    <label for="username" class="form-label">Username</label>
+                    <div class="input-group has-validation">
+                      <span class="input-group-text">@</span>
+                      <input type="text" class="form-control" name="username" id="username" placeholder="Username" required="">
+                      <div class="invalid-feedback">
+                          Your username is required.
+                      </div>
+                    </div>
+                  </div>
+      
+                  <!-- Optional email field -->
+                  <div class="col-12">
+                    <label for="email" class="form-label">Email <span class="text-body-secondary">(Optional)</span></label>
+                    <input type="email" class="form-control" name="email" id="email" placeholder="you@example.com">
+                    <div class="invalid-feedback">
+                      Please enter a valid email address for updates.
+                    </div>
+                  </div>
+      
+                  <!-- Country selection dropdown -->
+                  <div class="col-md-12">
+                    <label for="country" class="form-label">Country</label>
+                    <select class="form-select" id="country" required="">
+                      <option value="">Choose...</option>
+                      <option>United States</option>
+                      <option>United kingdom</option>
+                      <option>Greece</option>
+                      <option>Albania</option>
+                      <option>Italy</option>
+                      <option>Spain</option>
+                      <!-- Add more options as needed -->
+                    </select>
+                    <div class="invalid-feedback">
+                      Please select a valid country.
+                    </div>
+                  </div>
+      
+                  <!-- Recipe content textarea -->
+                  <div class="col-12">
+                    <label for="article" class="form-label">Write your recipe</label>
+                    <textarea class="form-control" name="recipe" id="recipe" placeholder="Write your recipe here" rows="6" required=""></textarea>
+                    <div class="invalid-feedback">
+                      Please enter your recipe.
+                    </div>
+                  </div>
+      
+                </div>
+      
+                <!-- Divider line -->
+                <hr class="my-4">
+      
+                <!-- Submit button -->
+                <button class="w-100 btn btn-primary btn-lg" type="submit">Submit</button>
+              </form>
+          </div>
+      </div>
+      <!-- Include footer partial -->
+      <%- include("partials/footer.ejs") %> 
