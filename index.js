@@ -44,7 +44,7 @@ app.get("/continueReading", (req, res) => {
     subject: subject,
     title: title,
     username: username,
-    recipe: recipe,
+    recipe: formattedRecipe,
     isContentValid: isContentValid,
     currentYear: currentYear,
     posted: posted,
@@ -127,20 +127,12 @@ app.post("/submit", (req, res) => {
 });
 
 
-// Function to format text with <p> tags every 75 characters or on a new line
-function insertLineBreaks(text, charsPerParagraph = 90) {
-  // Split text by new lines first to preserve user-added new lines
-  const lines = text.split('\n');
-  const paragraphs = [];
+// Function to add <p> tags based on user-entered new lines
+function insertLineBreaks(text) {
+  // Split text by new lines and wrap each line in a <p> tag
+  const paragraphs = text.split('\n').map(line => `<p>${line}</p>`);
 
-  lines.forEach(line => {
-    // Break each line into chunks of `charsPerParagraph` and wrap in <p>
-    for (let i = 0; i < line.length; i += charsPerParagraph) {
-      paragraphs.push(`<p>${line.slice(i, i + charsPerParagraph)}</p>`);
-    }
-  });
-
-  return paragraphs.join(''); // Join all <p> tags without extra spaces
+  return paragraphs.join(''); // Join all paragraphs without extra spaces
 }
 
 
