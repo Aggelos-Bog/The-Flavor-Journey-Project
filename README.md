@@ -68,7 +68,7 @@ Follow these steps to set up and run the Flavour Journey Project locally:
    Use the following command to clone the repository to your local machine:
    ```bash
    git clone https://github.com/yourusername/flavour-journey.git
-
+   ```
 2. **Navigate into the project directory**
    Move into the project directory:
  ```bash
