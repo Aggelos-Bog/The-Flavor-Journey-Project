@@ -17,7 +17,7 @@
 
 ---
 
-## 1. Introduction
+## Introduction
 
 *
 The Flavour Journey Project is a web application created primarily for educational purposes.
