@@ -19,20 +19,20 @@
 
 ## Introduction
 
-*
-The Flavour Journey Project is a web application created primarily for educational purposes.
+
+*The Flavour Journey Project is a web application created primarily for educational purposes.
 It was designed to explore and demonstrate the integration of Node.js, Express.js, EJS templates,
 and Bootstrap in a cohesive project. While the application was not intended for production, 
-it serves as a showcase of these technologies in action.
+it serves as a showcase of these technologies in action.*
 
-If developed further, the project has the potential to provide a complete user experience 
+*If developed further, the project has the potential to provide a complete user experience 
 for food enthusiasts. With its artistic approach to cooking, it could become a platform to
-connect individuals who share a passion for culinary adventures and exploration.
-*
+connect individuals who share a passion for culinary adventures and exploration.*
+
 
 ---
 
-## 2. Features
+## Features
 
 The Flavour Journey Project includes the following features:
 
@@ -46,7 +46,7 @@ These features demonstrate a fundamental understanding of dynamic web applicatio
 
 ---
 
-## 3. Technologies Used
+## Technologies Used
 
 The Flavour Journey Project was built using the following technologies:
 
@@ -60,7 +60,7 @@ The Flavour Journey Project was built using the following technologies:
 
 ---
 
-## 4. Installation
+## Installation
 
 Follow these steps to set up and run the Flavour Journey Project locally:
 
@@ -92,7 +92,7 @@ http://localhost:3000
 
 ---
 
-## 5. Usage
+## Usage
 
 The Flavour Journey Project is a simple and interactive web application. Here's how to navigate and use its features:
 
@@ -113,12 +113,12 @@ These features combine to create an interactive and educational experience for u
 
 ---
 
-## 6.License
+## License
 This project is licensed under the MIT License. See the LICENSE file for details.
 
 ---
 
-## 8. Acknowledgements
+## Acknowledgements
 
 I would like to acknowledge the following resources that contributed to the development of this project:
 
