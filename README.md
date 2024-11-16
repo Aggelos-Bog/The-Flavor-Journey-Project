@@ -77,7 +77,7 @@ cd flavour-journey
 3. **Install dependencies**
 Install all required Node.js packages:
 ```bash
-npm install
+npm install -y body-parser ejs express
 ```
 4. **Run the Application**
 Start the application using the Node.js runtime:
