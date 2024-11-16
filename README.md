@@ -73,21 +73,22 @@ Follow these steps to set up and run the Flavour Journey Project locally:
    Move into the project directory:
  ```bash
 cd flavour-journey
-
+```
 3. **Install dependencies**
 Install all required Node.js packages:
 ```bash
 npm install
-
+```
 4. **Run the Application**
 Start the application using the Node.js runtime:
 ```bash
 node app.js
-
+```
 5. **View the Application**
 Open your browser and navigate to:
 ```bash
 http://localhost:3000
+```
 
 ---
 
