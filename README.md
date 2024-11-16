@@ -82,7 +82,7 @@ npm install -y body-parser ejs express
 4. **Run the Application**
 Start the application using the Node.js runtime:
 ```bash
-node app.js
+node .\index.js
 ```
 5. **View the Application**
 Open your browser and navigate to:
